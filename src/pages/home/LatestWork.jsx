@@ -63,7 +63,9 @@ function LatestWork() {
         close={() => setIndex(-1)}
         slides={images.map(src => ({ src }))}
       />
-      <p className='text-[#B87333] text-[20px] cursor-pointer underline'>VIEW MORE </p>
+      {/* <p className='text-[#B87333] text-[20px] cursor-pointer underline'>VIEW MORE </p> */}
+      <a href='/gallery' className='text-[#B87333] text-[18px] cursor-pointer underline'>VIEW MORE </a>
+
 
     </div>
   )

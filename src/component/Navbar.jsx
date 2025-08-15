@@ -18,18 +18,18 @@ function Navbar() {
         
         {/* Logo */}
         <div className='flex justify-center items-center gap-[5px]'>
-          <p className='lg:text-[1.1vw] text-[5vw] md:text-[2.5vw] font-black'>LOGO</p>
+          <p className='lg:text-[1.1vw] text-[5vw] md:text-[2.5vw] font-black'>SHOTBYMOIRE</p>
         </div>
 
         {/* Desktop Menu */}
         <div className='hidden lg:flex gap-[32px] items-center text-white'>
-          <a href='#how-it-works'><p className='text-[0.8vw] '>HOME</p></a>
-          <a href='#why-choose-us'><p className='text-[0.8vw]'>GALLERY</p></a>
+          <a href='/'><p className='text-[0.8vw] '>HOME</p></a>
+          <a href='/gallery'><p className='text-[0.8vw]'>GALLERY</p></a>
           <a href='#about'><p className='text-[0.8vw]'>ABOUT</p></a>
-          <a href='#about'><p className='text-[0.8vw]'>ABOUT</p></a>
-          <a href='#about'><p className='text-[0.8vw]'>BOOKING</p></a>
-          <a href='#about'><p className='text-[0.8vw]'>BOOKING</p></a>
-          <a href='#about'><p className='text-[0.8vw]'>CONTACT</p></a>    
+          {/* <a href='#about'><p className='text-[0.8vw]'>ABOUT</p></a> */}
+          <a href='/booking'><p className='text-[0.8vw]'>BOOKING</p></a>
+          {/* <a href='#about'><p className='text-[0.8vw]'>BOOKING</p></a> */}
+          <a href='/contact'><p className='text-[0.8vw]'>CONTACT</p></a>    
 
         </div>
 
@@ -43,10 +43,13 @@ function Navbar() {
 
       {/* Mobile Dropdown Menu */}
       {menuOpen && (
-        <div className='flex flex-col lg:hidden gap-[20px] md:gap-[25px] bg-white px-[20px] py-[20px] shadow-md z-50 absolute top-[100%] w-full left-0'>
-          <a href='#how-it-works' onClick={toggleMenu}><p className='text-[5vw] md:text-[3.5vw]'>How it works</p></a>
-          <a href='#why-choose-us' onClick={toggleMenu}><p className='text-[5vw] md:text-[3.5vw]'>Why Us</p></a>
-          <a href='#about' onClick={toggleMenu}><p className='text-[5vw] md:text-[3.5vw]'>About</p></a>
+        <div className='flex flex-col lg:hidden gap-[20px] md:gap-[25px] bg-black text-white px-[20px] py-[20px] shadow-md z-50 absolute top-[100%] w-full left-0'>
+          <a href='/' onClick={toggleMenu}><p className='text-[5vw] md:text-[3.5vw]'>HOME</p></a>
+          <a href='/gallery' onClick={toggleMenu}><p className='text-[5vw] md:text-[3.5vw]'>GALLERY</p></a>
+          <a href='#about' onClick={toggleMenu}><p className='text-[5vw] md:text-[3.5vw]'>ABOUT</p></a>
+          <a href='/booking' onClick={toggleMenu}><p className='text-[5vw] md:text-[3.5vw]'>BOOKING</p></a>
+          <a href='/contact' onClick={toggleMenu}><p className='text-[5vw] md:text-[3.5vw]'>CONTACT</p></a>
+
         </div>
       )}
     </div>
