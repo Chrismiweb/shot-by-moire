@@ -13,11 +13,12 @@ function Booking() {
       {/* Calendly inline widget */}
       <div
         className="calendly-inline-widget"
-        data-url="https://calendly.com/chrismibiteso/30min"
+        data-url="https://calendly.com/shotbymoire/30min"
         style={{ minWidth: "320px", height: "700px" }}
       ></div>
     </div>
   );
 }
+
 
 export default Booking;

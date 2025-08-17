@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 const PricingCarousel = () => {
     
   const sessions = [
-        {
+    {
       title: "BOOKING DEPOSIT",
       price: "$30",
       image: "/images/8d276812-95f5-40cb-90c7-5b924f426960.JPG", // replace with your actual image URL
@@ -59,7 +59,7 @@ const PricingCarousel = () => {
     },
   ];
 
-  const settings = {
+  const desktopsettings = {
     dots: false,
     infinite: true,
     speed: 500,
@@ -84,13 +84,67 @@ const PricingCarousel = () => {
     ],
   };
 
+    const tabletsettings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2500,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 1024, // tablet
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 640, // mobile
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
+  const mobilesettings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2500,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 1024, // tablet
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 640, // mobile
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
+
   return (
     <div className="w-full">
-      <Slider {...settings}>
+      {/* desktop view only */}
+
+      <Slider {...desktopsettings}>
         {sessions.map((session, index) => (
-          <div key={index} className="w-full">
+          <div key={index}>
+            {/* desktop view only */}
             <div
-              className="relative h-[60vh] lg:h-[80vh] flex flex-col justify-start pt-[70px] items-center text-center text-black bg-cover bg-center"
+              className="hidden lg:flex  relative h-[60vh] lg:h-[80vh]  flex-col justify-start pt-[70px] items-center text-center text-black bg-cover bg-center"
               style={{
                 backgroundImage: `url(${session.image})`,
               }}
@@ -108,6 +162,65 @@ const PricingCarousel = () => {
                 </button>
                 </a>
                 
+              </div>
+            </div>
+          </div>
+        ))}
+      </Slider>
+
+      {/* tablet view only */}
+      <Slider {...tabletsettings}>
+        {sessions.map((session, index) => (
+          <div key={index}>
+            {/* tablet view only */}
+            <div
+              className="hidden md:flex lg:hidden  relative h-[60vh] lg:h-[80vh]  flex-col justify-start pt-[70px] items-center text-center text-black bg-cover bg-center"
+              style={{
+                backgroundImage: `url(${session.image})`,
+              }}
+            >
+              <div className="absolute inset-0 bg-black opacity-60 z-0"></div>
+              <div className="relative z-10">
+                <h3 className="md:text-[20px] lg:text-lg font-semibold text-white tracking-widest uppercase">
+                    {session.title}
+                </h3>
+                <h1 className="md:text-[35px] lg:text-6xl font-bold mt-2 text-white">{session.price}</h1>
+                
+                <a href="/booking">
+                  <button className="bg-[#b8894d] text-white px-6 py-2 mt-4 rounded hover:bg-[#a67c3d] transition">
+                      BOOK NOW
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </Slider>
+
+
+    {/* mobile view only */}
+      <Slider {...mobilesettings}>
+        {sessions.map((session, index) => (
+          <div key={index}>
+            {/* tablet view only */}
+            <div
+              className="flex md:hidden lg:hidden  relative h-[60vh] lg:h-[80vh]  flex-col justify-start pt-[70px] items-center text-center text-black bg-cover bg-center"
+              style={{
+                backgroundImage: `url(${session.image})`,
+              }}
+            >
+              <div className="absolute inset-0 bg-black opacity-60 z-0"></div>
+              <div className="relative z-10">
+                <h3 className="md:text-[20px] lg:text-lg font-semibold text-white tracking-widest uppercase">
+                    {session.title}
+                </h3>
+                <h1 className="md:text-[35px] lg:text-6xl font-bold mt-2 text-white">{session.price}</h1>
+                
+                <a href="/booking">
+                  <button className="bg-[#b8894d] text-white px-6 py-2 mt-4 rounded hover:bg-[#a67c3d] transition">
+                      BOOK NOW
+                  </button>
+                </a>
               </div>
             </div>
           </div>

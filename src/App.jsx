@@ -6,6 +6,7 @@ import GalleryPage from './pages/gallery/GalleryPage';
 import About from './pages/home/About';
 import ContactPage from './pages/contact/ContactPage';
 import BookingPage from './pages/booking/BookingPage';
+import Aboutpage from './pages/about/Aboutpage';
 
 function App() {
 
@@ -14,9 +15,12 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />}/>
         <Route path="/gallery" element={<GalleryPage />}/>
-        <Route path="/about" element={<About />}/>
+        {/* <Route path="/about" element={<About />}/> */}
         <Route path="/contact" element={<ContactPage />}/>
         <Route path="/booking" element={<BookingPage />}/>
+        <Route path="/booking" element={<BookingPage />}/>
+        <Route path="/about" element={<Aboutpage />}/>
+
 
 
       </Routes>

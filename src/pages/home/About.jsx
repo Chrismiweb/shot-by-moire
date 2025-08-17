@@ -76,7 +76,7 @@ function About() {
           My name is Mo Abdalla, <br/> I’m a <span className='text-[#B87333]'>Photographer.</span>
         </p>
         <div className='w-[5%] h-[1px] bg-black'></div>
-        <p className='text-[19px] md:text-[24px] lg:text-[18px]'>
+        <p className='text-[19px] md:text-[24px] lg:text-[18px] text-justify'>
           A passionate photographer, videographer, and editor dedicated to turning visions into unforgettable visuals. Self-taught and driven, I blend artistry and precision to tell stories through timeless portraits and cinematic videos. As an athlete and footballer, I bring discipline, focus, and creativity to every project, creating lasting impressions for my clients.
         </p>
 

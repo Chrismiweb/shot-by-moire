@@ -25,7 +25,7 @@ function Navbar() {
         <div className='hidden lg:flex gap-[32px] items-center text-white'>
           <a href='/'><p className='text-[0.8vw] '>HOME</p></a>
           <a href='/gallery'><p className='text-[0.8vw]'>GALLERY</p></a>
-          <a href='#about'><p className='text-[0.8vw]'>ABOUT</p></a>
+          <a href='/about'><p className='text-[0.8vw]'>ABOUT</p></a>
           {/* <a href='#about'><p className='text-[0.8vw]'>ABOUT</p></a> */}
           <a href='/booking'><p className='text-[0.8vw]'>BOOKING</p></a>
           {/* <a href='#about'><p className='text-[0.8vw]'>BOOKING</p></a> */}
@@ -46,7 +46,7 @@ function Navbar() {
         <div className='flex flex-col lg:hidden gap-[20px] md:gap-[25px] bg-black text-white px-[20px] py-[20px] shadow-md z-50 absolute top-[100%] w-full left-0'>
           <a href='/' onClick={toggleMenu}><p className='text-[5vw] md:text-[3.5vw]'>HOME</p></a>
           <a href='/gallery' onClick={toggleMenu}><p className='text-[5vw] md:text-[3.5vw]'>GALLERY</p></a>
-          <a href='#about' onClick={toggleMenu}><p className='text-[5vw] md:text-[3.5vw]'>ABOUT</p></a>
+          <a href='/about' onClick={toggleMenu}><p className='text-[5vw] md:text-[3.5vw]'>ABOUT</p></a>
           <a href='/booking' onClick={toggleMenu}><p className='text-[5vw] md:text-[3.5vw]'>BOOKING</p></a>
           <a href='/contact' onClick={toggleMenu}><p className='text-[5vw] md:text-[3.5vw]'>CONTACT</p></a>
 
