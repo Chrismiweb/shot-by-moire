@@ -43,12 +43,12 @@ function Navbar() {
 
       {/* Mobile Dropdown Menu */}
       {menuOpen && (
-        <div className='flex flex-col lg:hidden gap-[20px] md:gap-[25px] bg-black text-white px-[20px] py-[20px] shadow-md z-50 absolute top-[100%] w-full left-0'>
-          <a href='/' onClick={toggleMenu}><p className='text-[5vw] md:text-[3.5vw]'>HOME</p></a>
-          <a href='/gallery' onClick={toggleMenu}><p className='text-[5vw] md:text-[3.5vw]'>GALLERY</p></a>
-          <a href='/about' onClick={toggleMenu}><p className='text-[5vw] md:text-[3.5vw]'>ABOUT</p></a>
-          <a href='/booking' onClick={toggleMenu}><p className='text-[5vw] md:text-[3.5vw]'>BOOKING</p></a>
-          <a href='/contact' onClick={toggleMenu}><p className='text-[5vw] md:text-[3.5vw]'>CONTACT</p></a>
+        <div className='flex flex-col lg:hidden gap-[25px] md:gap-[25px] bg-black text-white px-[20px] py-[20px] pb-[50px] shadow-md z-50 absolute top-[100%] w-full left-0'>
+          <a href='/' onClick={toggleMenu}><p className='text-[5vw] md:text-[3.5vw] font-bold'>HOME</p></a>
+          <a href='/gallery' onClick={toggleMenu}><p className='text-[5vw] md:text-[3.5vw] font-bold'>GALLERY</p></a>
+          <a href='/about' onClick={toggleMenu}><p className='text-[5vw] md:text-[3.5vw] font-bold'>ABOUT</p></a>
+          <a href='/booking' onClick={toggleMenu}><p className='text-[5vw] md:text-[3.5vw] font-bold'>BOOKING</p></a>
+          <a href='/contact' onClick={toggleMenu}><p className='text-[5vw] md:text-[3.5vw] font-bold'>CONTACT</p></a>
 
         </div>
       )}
