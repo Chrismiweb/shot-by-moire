@@ -7,6 +7,7 @@ import About from './pages/home/About';
 import ContactPage from './pages/contact/ContactPage';
 import BookingPage from './pages/booking/BookingPage';
 import Aboutpage from './pages/about/Aboutpage';
+import PricingPage from './pages/pricing/PricingPage';
 
 function App() {
 
@@ -18,7 +19,7 @@ function App() {
         {/* <Route path="/about" element={<About />}/> */}
         <Route path="/contact" element={<ContactPage />}/>
         <Route path="/booking" element={<BookingPage />}/>
-        <Route path="/booking" element={<BookingPage />}/>
+        <Route path="/pricing" element={<PricingPage />}/>
         <Route path="/about" element={<Aboutpage />}/>
 
 

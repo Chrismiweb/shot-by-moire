@@ -157,7 +157,7 @@ const PricingCarousel = () => {
                 <h1 className="md:text-[35px] lg:text-6xl font-bold mt-2 text-white">{session.price}</h1>
                 
                 <a href="/booking">
-                <button className="bg-[#b8894d] text-white px-6 py-2 mt-4 rounded hover:bg-[#a67c3d] transition">
+                <button className="bg-[#b8894d] cursor-pointer text-white px-6 py-2 mt-4 rounded hover:bg-[#a67c3d] transition">
                     BOOK NOW
                 </button>
                 </a>
