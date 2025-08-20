@@ -1,93 +1,76 @@
-// import React from 'react'
-// import { FormEvent, useState } from "react"
-// // import Link from "next/link"
-// import { ToastContainer, toast } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
+import React, { useState } from "react";
+import { FiMessageCircle, FiMail, FiPhone, FiMapPin } from "react-icons/fi";
+import { FaXTwitter } from "react-icons/fa6";
+import { ToastContainer, toast } from 'react-toastify';
+
+export default function ContactSection() {
+const [name, setName] = useState("");
+const [email, setEmail] = useState("");     
+const [phone, setPhone] = useState("");
+const [message, setMessage] = useState("");
+const [loader, setLoader] = useState(false);
 
 
-// export default function Contact(){
-//     const [email, setEmail] = useState("");
-//     const [fullName, setFullName] = useState("")
-//     const [message, setMessage] = useState("")
-//     const [sending, setIsSending] = useState(false)
-
-//     async function fetchApi(e){
-//         if(!email || !fullName || !message){
-//            return toast.warn("Please fill all credentials")
-//         }
-//         setIsSending(true)
-
-//         e.preventDefault()
-//         try {
-//             // const baseUrl = "https://forms-io.onrender.com/submit-form/31c6c5bc-6c57-4e93-b7f8-ef481b0dd41e"
-//             const baseUrl = "https://forms-io.onrender.com/submit-form/c4d95fa1-3184-4ec1-af18-122cdc2c21af"
-
-//             const response = await fetch(baseUrl,{
-//                 method: "POST",
-//                 headers: {"Content-Type": "application/json"},
-//                 body : JSON.stringify({email, fullName, message})
-//             })
-//             .then((res)=>res.json())
-//             if(response){
-//                 toast.success("Your message have been sent successful")
-//                 setIsSending(false)
-//             }
-//         } catch (error) {
-//             // toast.console.error();
-//             toast.error("your message was not sent, please try again later")
-            
-//         }
-//     }
-//     return(
-//     <div className="w-[100%] bg-white flex-col gap-[50px] py-[50px] flex justify-center items-center">
-//          <div className="md:w-[80%] w-[90%] rounded-lg bg-black py-[20px] px-[30px]">
-//             <h1 className="text-white font-bold">FILL THE FORM BELOW</h1>
-//         </div>    
-//         <ToastContainer/>
-//         <form 
-//         // action ="https://forms-io.onrender.com/submit-form/31c6c5bc-6c57-4e93-b7f8-ef481b0dd41e"
-//         // method="POST"
-//         className="md:w-[80%] w-[100%] px-[30px] flex flex-col gap-[25px]">
-//             <div className="lg:w-[70%] w-[100%] flex flex-col gap-[10px]">
-//                 <p className="font-medium text-black">FULL NAME</p>
-//                 <input onChange={(e)=>setFullName(e.target.value)} required name="fullname" type="text" className="border w-[100%] text-black bg-gray-200 py-[8px] border-[#F8E7F8] px-[10px] rounded-[10px]" />
-//             </div> 
-//             <div className="lg:w-[70%] w-[100%] flex flex-col gap-[10px]">
-//                 <p className="font-medium text-black">EMAIL</p>
-//                 <input onChange={(e)=>setEmail(e.target.value)} required name="email" type="email" className="border w-[100%] text-black bg-gray-200 py-[8px] border-[#F8E7F8] px-[10px] rounded-[10px]" />
-//             </div>     
-//             <div className="lg:w-[70%] w-[100%] flex flex-col gap-[10px]">
-//                 <p className="font-medium text-black">TYPE YOUR MESSAGE</p>
-//                 <textarea onChange={(e)=>setMessage(e.target.value)} required name="email" className="border h-[200px] w-[100%] text-black bg-gray-200 py-[8px] border-[#F8E7F8] px-[10px] rounded-[10px]" />
-//             </div>    
-//             <button onClick={fetchApi} type="submit" className="bg-[#B87333] cursor-pointer transition-all duration-1000 hover:bg-[#d49633] w-[40%] lg:w-[15%] rounded-[10px] py-[12px] text-[white] font-semibold">{sending ? "Sending..." : "Send Now"}</button>                   
-//         </form>
-//         {/* <div className="w-[100%] gap-[20px] justify-center items-center flex flex-col py-[70px] md:px-[20px] border-t-2 border-[#F8E7F8]">
-//             <h1 className="text-center text-[20px] font-bold text-[#FB9B02]">READ OUR FAQ</h1>
-//             <p className="text-[#00000099] font-semibold text-center text-[14px] w-[80%] lg:w-[50%]">Curious about our services or have a quick question? Explore our FAQ to find solutions and valuable information. Let&apos;s get you started on the right path!</p>
-//             <Link to = '/'>
-//                 <button className=" px-[25px] bg-[#FB9B02] transition-all duration-1000 hover:bg-[#d49633] rounded-lg py-[10px] text-white font-semibold">Click Here</button>
-//             </Link>
-//         </div> */}
-//     </div>
-//     )
+//   async function handleSubmit(e) {
+//     setLoader(true);
+//     e.preventDefault();
+  
+//     const baseurl ='https://forms-io.onrender.com/submit-form/fab86b19-a63c-404f-a52d-0e37b5e9c8da'
+//     const response = await fetch(baseurl,{
+//         method : "POST",
+//         headers: { 'Content-Type': 'application/json' },
+//         body: JSON.stringify({ name, email, phone, message } )
+//     })
+//     const data = await response.json() 
+//     if(data.success) {
+//       alert('Message sent successfully!');
+//       console.log(data);
+//       setLoader(false);
+//       toast.success("Message sent successfully!")
+//   }
 // }
 
 
+async function handleSubmit(e) {
+  e.preventDefault();
+  setLoader(true);
 
+  const baseurl = "https://forms-io.onrender.com/submit-form/fab86b19-a63c-404f-a52d-0e37b5e9c8da";
 
+  try {
+    // Build a FormData payload like a real form post
+    const fd = new FormData();
+    fd.append("fullName", name);
+    fd.append("email", email);
+    fd.append("phone", phone);
+    fd.append("message", message);
 
-import React from "react";
-import { FiMessageCircle, FiMail, FiPhone, FiMapPin } from "react-icons/fi";
-import { FaXTwitter } from "react-icons/fa6";
+    // IMPORTANT: use window.fetch to bypass any shadowed fetch wrappers
+    const res = await window.fetch(baseurl, {
+      method: "POST",
+      body: fd,                 // no headers: browser sets correct multipart/form-data boundary
+    });
 
-export default function ContactSection() {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
+    const data = await res.json().catch(() => ({}));
+    if (data?.status === true) {
+      toast.success("Message sent successfully!");
+      // optional reset
+      // setName(""); setEmail(""); setPhone(""); setMessage("");
+    } else {
+      throw new Error(data?.message || `HTTP ${res.status}`);
+    }
+  } catch (err) {
+    console.error(err);
+    toast.error(`Failed to send message: ${err.message}`);
+  } finally {
+    setLoader(false);
+  }
+}
+
 
   return (
     <section className="relative">
+      <ToastContainer />
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(transparent_1px,rgba(0,0,0,0.03)_1px)] [background-size:22px_22px]"
@@ -108,55 +91,62 @@ export default function ContactSection() {
         <div className="grid gap-10 lg:grid-cols-2">
           {/* Left: Form card */}
           <div className="bg-white border border-gray-200 rounded-2xl p-5 sm:p-8">
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6" method="POST">
               {/* Name */}
                 <div>
                   <label className="block text-sm font-medium text-gray-700">Your name</label>
                   <input
                     type="text"
+                    name="name"
+                    value={name}
                     placeholder="Your name"
                     className="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-gray-900"
+                    onChange = {(e)=>setName(e.target.value)}
                   />
                 </div>
-
               {/* Email */}
               <div>
                 <label className="block text-sm font-medium text-gray-700">Email</label>
                 <input
                   type="email"
-                  placeholder="you@company.com"
+                    name="email"
+                  placeholder="email@gmail.com"
                   className="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-gray-900"
+                  onChange = {(e)=>setEmail(e.target.value)}
+
                 />
               </div>
-
               {/* Phone */}
               <div>
                 <label className="block text-sm font-medium text-gray-700">Phone number</label>
                 <div className="mt-1 grid grid-cols-[110px,1fr] gap-3">
                   <input
                     type="tel"
+                    name="phone"
                     placeholder="+1 (555) 000-0000"
                     className="rounded-lg border border-gray-300 px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-gray-900"
+                    onChange = {(e)=>setPhone(e.target.value)}
+
                   />
                 </div>
               </div>
-
               {/* Message */}
               <div>
                 <label className="block text-sm font-medium text-gray-700">Message</label>
                 <textarea
                   rows={4}
                   placeholder="Leave us a message..."
+                  name="message"
                   className="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-gray-900 resize-y"
+                  onChange = {(e)=>setMessage(e.target.value)}
+
                 />
               </div>
-
-
               <button
                 type="submit"
                 className="w-full rounded-xl bg-gray-900 text-white py-3 font-semibold shadow-lg shadow-gray-900/15 hover:translate-y-[-1px] transition"
               >
-                Send message
+                {loader ? "Sending..." : "Send message"}
               </button>
             </form>
           </div>
@@ -192,18 +182,18 @@ export default function ContactSection() {
                 <h3 className="text-lg font-semibold text-gray-900">Call me</h3>
                 <p className="mt-1 text-sm text-gray-600">Call me anytime</p>
                 <a href="tel:+15550000000" className="mt-4 inline-flex items-center gap-2 text-gray-900 font-medium hover:underline">
-                  <FiPhone /> +1 (555) 000-0000
+                  <FiPhone /> +1 (206) 476-3228
                 </a>
               </div>
 
               {/* Visit us */}
-              <div className="p-6 sm:p-8">
+              {/* <div className="p-6 sm:p-8">
                 <h3 className="text-lg font-semibold text-gray-900">Visit us</h3>
                 <p className="mt-1 text-sm text-gray-600">Chat to us in person at our Melbourne HQ.</p>
                 <a href="#" className="mt-4 inline-flex items-center gap-2 text-gray-900 font-medium hover:underline">
                   <FiMapPin /> 100 Smith Street, Collingwood VIC 3066
                 </a>
-              </div>
+              </div> */}
             </div>
           </aside>
         </div>

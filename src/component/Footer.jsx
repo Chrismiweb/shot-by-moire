@@ -49,7 +49,7 @@ function Footer() {
                 <p className='font-bold text-[25px]'>Contacts</p>
                 <div className='w-[8%] h-[1px] bg-[#B87333]'></div>
                 <div className=''>
-                    <p className='text-[18px] md:text-[22px] lg:text-[15px] text-[#252525]'><span className='font-bold'>Phone:</span> +1 (800) 123 45 67</p>
+                    <p className='text-[18px] md:text-[22px] lg:text-[15px] text-[#252525]'><span className='font-bold'>Phone:</span> +1 (206) 476-3228</p>
                     <p className='text-[18px] md:text-[22px] lg:text-[15px] text-[#252525]'><span className='font-bold'>Email:</span> shotbymoire@gmail.com</p>
                 </div>
                 <p className='text-[16px] md:text-[20px] lg:text-[15px] text-[#252525]'>Copyright © {year} Shot By Moire. All Rights Reserved.</p>
