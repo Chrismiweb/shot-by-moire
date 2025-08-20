@@ -136,9 +136,9 @@ function Navbar() {
         {/* Desktop Menu */}
         <div className="hidden lg:flex gap-[32px] items-center text-white">
           {links.map(({ to, label }) => (
-            <Link key={to} to={to} className="text-[0.8vw]">
+            <a key={to} href={to} className="text-[0.8vw]">
               {label}
-            </Link>
+            </a>
           ))}
         </div>
 
@@ -164,11 +164,11 @@ function Navbar() {
             <div className="flex flex-col gap-[25px] md:gap-[25px]">
               {links.map(({ to, label }) => (
                 <motion.div key={to} variants={itemVariants}>
-                  <Link to={to} onClick={closeMenu} className="block">
+                  <a href={to} onClick={closeMenu} className="block">
                     <p className="text-[5vw] md:text-[3.5vw] font-bold">
                       {label}
                     </p>
-                  </Link>
+                  </a>
                 </motion.div>
               ))}
             </div>
