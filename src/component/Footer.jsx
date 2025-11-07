@@ -35,7 +35,7 @@ function Footer() {
                         <img className='w-full h-full object-fill' src="/images/665c9fb6-2f36-46ec-8601-90cb04aa621a.JPG" alt="" />
                     </div>
                     <div className='w-[90px] h-[90px] bg-red-400 cursor-pointer'>
-                        <img className='w-full h-full object-fill' src="/images/1f3a3d47-9158-404b-8f72-b4e50c7852ed.JPG" alt="" />
+                        <img className='w-full h-full object-fill' src="/images/lv.jpg" alt="" />
                     </div>                    
                     <div className='w-[90px] h-[90px] bg-red-400 cursor-pointer'>
                         <img className='w-full h-full object-fill' src="/images/fad89210-491c-4450-b914-a0fa059f43d3.JPG" alt="" />
