@@ -17,7 +17,7 @@ function About() {
     >
       <div className='w-[250px] h-[250px] md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] rounded-full overflow-hidden'>
         <img
-          src="/image/mobiizi profile.jpg"
+          src="/image/mobiizi profile2.jpg"
           className='w-full h-full object-cover'
           alt=""
         />
