@@ -2,6 +2,8 @@
 import React from "react";
 import { FaFacebookF, FaTwitter, FaBehance } from "react-icons/fa";
 import { FiDribbble } from "react-icons/fi";
+import { AiFillInstagram } from "react-icons/ai";
+import { FaTiktok } from "react-icons/fa6";
 
 export default function AboutMe() {
   return (
@@ -55,30 +57,18 @@ export default function AboutMe() {
             </a>
             <div className="text-sm text-slate-600 z-99">
               <div className="font-medium text-[19px] md:text-[24px] lg:text-[18px]">shotbymoire@gmail.com</div>
-              <div className="mt-2 flex items-center gap-3 text-white">
+              <div className="mt-2 flex items-center text-[20px] gap-3 text-white">
                 <a
-                  href="#fb"
+                  href="https://www.instagram.com/shotbymoire?igsh=c2g1c3U1dGwxaGRr&utm_source=qr"
                   className="grid h-9 w-9 place-items-center rounded-full bg-black hover:opacity-90 transition"
                 >
-                  <FaFacebookF />
+                  <AiFillInstagram />
                 </a>
                 <a
-                  href="#tw"
+                  href="https://www.tiktok.com/@shotbymoire?_r=1&_t=ZT-91Cvwxne4ud"
                   className="grid h-9 w-9 place-items-center rounded-full bg-black hover:opacity-90 transition"
                 >
-                  <FaTwitter />
-                </a>
-                <a
-                  href="#dr"
-                  className="grid h-9 w-9 place-items-center rounded-full bg-black hover:opacity-90 transition"
-                >
-                  <FiDribbble />
-                </a>
-                <a
-                  href="#be"
-                  className="grid h-9 w-9 place-items-center rounded-full bg-black hover:opacity-90 transition"
-                >
-                  <FaBehance />
+                  <FaTiktok />
                 </a>
               </div>
             </div>

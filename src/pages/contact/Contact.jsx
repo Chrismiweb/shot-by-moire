@@ -159,21 +159,21 @@ async function handleSubmit(e) {
                 <h3 className="text-lg font-semibold text-gray-900">Chat with me</h3>
                 <p className="mt-1 text-sm text-gray-600">Speak to me via live chat.</p>
                 <ul className="mt-4 space-y-3">
-                  <li>
+                  {/* <li>
                     <a href="#" className="inline-flex items-center gap-2 text-gray-900 font-medium hover:underline">
                       <FiMessageCircle /> Start a live chat
                     </a>
-                  </li>
+                  </li> */}
                   <li>
-                    <a href="mailto:hello@example.com" className="inline-flex items-center gap-2 text-gray-900 font-medium hover:underline">
-                      <FiMail /> Shoot us an email
-                    </a>
+                    <div className="inline-flex items-center gap-2 text-gray-900 font-medium hover:underline">
+                      <FiMail /> shotbymoire@gmail.com
+                    </div>
                   </li>
-                  <li>
+                  {/* <li>
                     <a href="#" className="inline-flex items-center gap-2 text-gray-900 font-medium hover:underline">
                       <FaXTwitter /> Message us on X
                     </a>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
 

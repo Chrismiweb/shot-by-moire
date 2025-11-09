@@ -7,20 +7,20 @@ function Footer() {
   return (
     <div className='w-full'>
         <div className='w-full bg-[#ECEFF1] text-black flex items-center justify-center py-[10px] gap-[10px] lg:gap-[25px]'>
-            <div className='flex items-center justify-center gap-[4px] lg:gap-[7px] hover:text-[#B87333] transition-all duration-300 cursor-pointer'>
+            <a href='https://www.tiktok.com/@shotbymoire?_r=1&_t=ZT-91Cvwxne4ud' className='flex items-center justify-center gap-[4px] lg:gap-[7px] hover:text-[#B87333] transition-all duration-300 cursor-pointer'>
                 <FaTiktok className='text-[16px] md::text-[18px]' />
                 <p className='text-[16px] md:text-[18px]'>tiktok</p>
-            </div>
+            </a>
             <div className='w-[5px] h-[5px] rounded-full bg-[#B87333]'></div>
-            <div className='flex items-center justify-center gap-[4px] lg:gap-[7px] hover:text-[#B87333] transition-all duration-300 cursor-pointer'>
+            <a href = 'https://www.instagram.com/shotbymoire?igsh=c2g1c3U1dGwxaGRr&utm_source=qr' className='flex items-center justify-center gap-[4px] lg:gap-[7px] hover:text-[#B87333] transition-all duration-300 cursor-pointer'>
                 <FaInstagram className='text-[16px] md::text-[18px]' />
                 <p className='text-[16px] md:text-[18px]'>instagram</p>
-            </div>
-            <div className='w-[5px] h-[5px] rounded-full bg-[#B87333]'></div>
+            </a>
+            {/* <div className='w-[5px] h-[5px] rounded-full bg-[#B87333]'></div>
             <div className='flex items-center justify-center gap-[4px] lg:gap-[7px] hover:text-[#B87333] transition-all duration-300 cursor-pointer'>
                 <FaFacebookF className='text-[16px] md::text-[18px]' />
                 <p className='text-[16px] md:text-[18px]'>facebook</p>
-            </div>
+            </div> */}
         </div>
         <div className='flex flex-col lg:flex-row w-full justify-evenly py-[30px] px-[20px] lg:px-0 lg:py-[50px] gap-[30px] lg:gap-0'>
             <div className='w-[90%] lg:w-[20%] flex flex-col gap-[25px]'>
