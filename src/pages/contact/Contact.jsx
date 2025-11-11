@@ -11,31 +11,11 @@ const [message, setMessage] = useState("");
 const [loader, setLoader] = useState(false);
 
 
-//   async function handleSubmit(e) {
-//     setLoader(true);
-//     e.preventDefault();
-  
-//     const baseurl ='https://forms-io.onrender.com/submit-form/fab86b19-a63c-404f-a52d-0e37b5e9c8da'
-//     const response = await fetch(baseurl,{
-//         method : "POST",
-//         headers: { 'Content-Type': 'application/json' },
-//         body: JSON.stringify({ name, email, phone, message } )
-//     })
-//     const data = await response.json() 
-//     if(data.success) {
-//       alert('Message sent successfully!');
-//       console.log(data);
-//       setLoader(false);
-//       toast.success("Message sent successfully!")
-//   }
-// }
-
-
 async function handleSubmit(e) {
   e.preventDefault();
   setLoader(true);
 
-  const baseurl = "https://forms-io.onrender.com/submit-form/fab86b19-a63c-404f-a52d-0e37b5e9c8da";
+  const baseurl = "https://forms-io.onrender.com/submit-form/a7a67a26-6f8e-4b8f-bb7f-5508586ebad2";
 
   try {
     // Build a FormData payload like a real form post
@@ -44,6 +24,9 @@ async function handleSubmit(e) {
     fd.append("email", email);
     fd.append("phone", phone);
     fd.append("message", message);
+
+    // console.log("Submitting to:", baseurl);
+    // console.log({ name, email, phone, message });
 
     // IMPORTANT: use window.fetch to bypass any shadowed fetch wrappers
     const res = await window.fetch(baseurl, {
@@ -91,7 +74,7 @@ async function handleSubmit(e) {
         <div className="grid gap-10 lg:grid-cols-2">
           {/* Left: Form card */}
           <div className="bg-white border border-gray-200 rounded-2xl p-5 sm:p-8">
-            <form onSubmit={handleSubmit} className="space-y-6" method="POST">
+            <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name */}
                 <div>
                   <label className="block text-sm font-medium text-gray-700">Your name</label>

@@ -47,9 +47,9 @@ function Hero() {
         alt={slides[currentIndex].text}
         className="w-full h-full object-cover transition-opacity duration-1000"
       />
-
       {/* Overlay text on top of each image */}
-      <div className="absolute w-[85%] top-[50%] left-[10px] lg:top-2/3 lg:left-[20%] px-4 py-2 rounded-md lg:max-w-[60%] md:text-left">
+      <div className="absolute w-[85%] top-[50%] left-[10px] lg:top-[60%] lg:left-[20%] px-4 py-2 rounded-md lg:max-w-[60%] md:text-left">
+        <a href='/booking' className="text-[20px] cursor-pointer hover:bg-black/85 bg-black text-white px-[35px] rounded-[15px] py-[15px]">Book Now</a>
         <p className="text-white text-[22px] md:text-[50px] font-semibold">
           {slides[currentIndex].text}
         </p>
