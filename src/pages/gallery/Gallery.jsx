@@ -5,6 +5,15 @@ import "yet-another-react-lightbox/styles.css";
 
 function Gallery() {
   const images = [
+        "/image/latestOne.jpeg",
+    "/image/latestTwo.jpeg",
+    "/image/latestThree.jpeg",
+    "/image/latestFour.jpeg",
+    "/image/latestFive.jpeg",
+    "/image/latestSix.jpeg",
+    "/image/latestSeven.jpeg",
+    "/image/latestEight.jpeg",
+    "/image/latestNine.jpeg",
   "/images/0a65d3ea-23df-4f5d-8438-bcd95ba4e6ef.JPG",
   "/images/1f3a3d47-9158-404b-8f72-b4e50c7852ed.JPG",
   "/images/02ca54c6-8057-45f7-8b7d-8daf0dba6b2d.JPG",
