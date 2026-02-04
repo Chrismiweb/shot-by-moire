@@ -15,30 +15,25 @@ async function handleSubmit(e) {
   e.preventDefault();
   setLoader(true);
 
-  const baseurl = "https://forms-io.onrender.com/submit-form/a7a67a26-6f8e-4b8f-bb7f-5508586ebad2";
+  // const baseurl = "https://forms-io.onrender.com/submit-form/a7a67a26-6f8e-4b8f-bb7f-5508586ebad2";
+  const baseurl = "https://forms-io.onrender.com/submit-form/b97a2c41-8d81-49ed-9225-cc5843527090";
+
+  
 
   try {
-    // Build a FormData payload like a real form post
-    const fd = new FormData();
-    fd.append("fullName", name);
-    fd.append("email", email);
-    fd.append("phone", phone);
-    fd.append("message", message);
-
-    // console.log("Submitting to:", baseurl);
-    // console.log({ name, email, phone, message });
 
     // IMPORTANT: use window.fetch to bypass any shadowed fetch wrappers
-    const res = await window.fetch(baseurl, {
+    const res = await fetch(baseurl, {
       method: "POST",
-      body: fd,                 // no headers: browser sets correct multipart/form-data boundary
+      // headers: { 'Content-Type': 'multipart/form-data' },
+      body: JSON.stringify({name, email,phone, message })
     });
 
-    const data = await res.json().catch(() => ({}));
-    if (data?.status === true) {
+    const data = await res.json();
+    if (data) {
       toast.success("Message sent successfully!");
-      // optional reset
-      // setName(""); setEmail(""); setPhone(""); setMessage("");
+      console.log(data)
+    console.log("FETCHING:", baseurl);
     } else {
       throw new Error(data?.message || `HTTP ${res.status}`);
     }
@@ -69,11 +64,11 @@ async function handleSubmit(e) {
             Chat to our friendly team 24/7 and get onboard in less than 5 minutes.
           </p>
         </header>
-
         {/* Body */}
         <div className="grid gap-10 lg:grid-cols-2">
           {/* Left: Form card */}
           <div className="bg-white border border-gray-200 rounded-2xl p-5 sm:p-8">
+            
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name */}
                 <div>
@@ -92,8 +87,9 @@ async function handleSubmit(e) {
                 <label className="block text-sm font-medium text-gray-700">Email</label>
                 <input
                   type="email"
+                  value={email}
                     name="email"
-                  placeholder="email@gmail.com"
+                  placeholder="your-email@gmail.com"
                   className="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-gray-900"
                   onChange = {(e)=>setEmail(e.target.value)}
 
@@ -106,6 +102,7 @@ async function handleSubmit(e) {
                   <input
                     type="tel"
                     name="phone"
+                    value={phone}
                     placeholder="+1 (555) 000-0000"
                     className="rounded-lg border border-gray-300 px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-gray-900"
                     onChange = {(e)=>setPhone(e.target.value)}
@@ -120,6 +117,7 @@ async function handleSubmit(e) {
                   rows={4}
                   placeholder="Leave us a message..."
                   name="message"
+                  value={message}
                   className="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-gray-900 resize-y"
                   onChange = {(e)=>setMessage(e.target.value)}
 
@@ -142,21 +140,11 @@ async function handleSubmit(e) {
                 <h3 className="text-lg font-semibold text-gray-900">Chat with me</h3>
                 <p className="mt-1 text-sm text-gray-600">Speak to me via live chat.</p>
                 <ul className="mt-4 space-y-3">
-                  {/* <li>
-                    <a href="#" className="inline-flex items-center gap-2 text-gray-900 font-medium hover:underline">
-                      <FiMessageCircle /> Start a live chat
-                    </a>
-                  </li> */}
                   <li>
                     <div className="inline-flex items-center gap-2 text-gray-900 font-medium hover:underline">
-                      <FiMail /> shotbymoire@gmail.com
+                      <FiMail /> studio@shotbymoire.com
                     </div>
                   </li>
-                  {/* <li>
-                    <a href="#" className="inline-flex items-center gap-2 text-gray-900 font-medium hover:underline">
-                      <FaXTwitter /> Message us on X
-                    </a>
-                  </li> */}
                 </ul>
               </div>
 
@@ -169,14 +157,7 @@ async function handleSubmit(e) {
                 </a>
               </div>
 
-              {/* Visit us */}
-              {/* <div className="p-6 sm:p-8">
-                <h3 className="text-lg font-semibold text-gray-900">Visit us</h3>
-                <p className="mt-1 text-sm text-gray-600">Chat to us in person at our Melbourne HQ.</p>
-                <a href="#" className="mt-4 inline-flex items-center gap-2 text-gray-900 font-medium hover:underline">
-                  <FiMapPin /> 100 Smith Street, Collingwood VIC 3066
-                </a>
-              </div> */}
+
             </div>
           </aside>
         </div>

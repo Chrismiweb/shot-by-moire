@@ -56,7 +56,7 @@ export default function AboutMe() {
               GET IN TOUCH!
             </a>
             <div className="text-sm text-slate-600 z-99">
-              <div className="font-medium text-[19px] md:text-[24px] lg:text-[18px]">shotbymoire@gmail.com</div>
+              <div className="font-medium text-[19px] md:text-[24px] lg:text-[18px]">studio@shotbymoire.com</div>
               <div className="mt-2 flex items-center text-[20px] gap-3 text-white">
                 <a
                   href="https://www.instagram.com/shotbymoire?igsh=c2g1c3U1dGwxaGRr&utm_source=qr"

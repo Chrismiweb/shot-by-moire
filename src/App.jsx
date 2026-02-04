@@ -8,6 +8,7 @@ import ContactPage from './pages/contact/ContactPage';
 import BookingPage from './pages/booking/BookingPage';
 import Aboutpage from './pages/about/Aboutpage';
 import PricingPage from './pages/pricing/PricingPage';
+import ContactTest from './pages/contact/ContactTest';
 
 function App() {
 
@@ -18,6 +19,8 @@ function App() {
         <Route path="/gallery" element={<GalleryPage />}/>
         {/* <Route path="/about" element={<About />}/> */}
         <Route path="/contact" element={<ContactPage />}/>
+        {/* <Route path="/contact" element={< ContactTest/>}/> */}
+
         <Route path="/booking" element={<BookingPage />}/>
         <Route path="/pricing" element={<PricingPage />}/>
         <Route path="/about" element={<Aboutpage />}/>
