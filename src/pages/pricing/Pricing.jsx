@@ -73,7 +73,7 @@ function Pricing() {
     <div className='w-full gap-[10px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-4'>
         {sessions.map((session, index) => (
           <div key={index}>
-            {/* desktop view only */}
+            {/* desktop view only */}     
             <div
               className="flex relative h-[60vh] lg:h-[80vh]  flex-col justify-start pt-[70px] items-center text-center text-black bg-cover bg-center"
               style={{
