@@ -13,7 +13,7 @@ function About() {
   return (
     <div
       ref={ref}
-      className='bg-[#ECEFF1] w-full flex flex-col lg:flex-row justify-center items-center py-[80px] gap-[60px]'
+      className='bg-[white] w-full flex flex-col lg:flex-row justify-center items-center py-[80px] gap-[60px]'
     >
       <div className='w-[250px] h-[250px] md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] rounded-full overflow-hidden'>
         <img

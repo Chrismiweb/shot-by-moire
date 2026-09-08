@@ -12,6 +12,12 @@ const PricingCarousel = () => {
       description: "(non-refundable to guarantee your spot)",
       image: "/images/8d276812-95f5-40cb-90c7-5b924f426960.JPG", // replace with your actual image URL
     },
+        {
+      title: "WEDDING/ENGAGEMENT EVENTS",
+      price: "$150-$200/hr",
+      description: "( $30 deposit to guarantee your spot)",
+      image: "/images/weddingpics8.jpeg", // replace with your actual image URL
+    },
       {
       title: "MINI SESSION",
       price: "$80",

@@ -5,17 +5,19 @@ import About from './About'
 import LatestWork from './LatestWork'
 import Footer from '../../component/Footer'
 import PricingCarousel from './PricingCarousel'
+import MyWork from './MyWork'
 
 
 function HomePage() {
   return (
     <div>
-        <Navbar/>
+        {/* <Navbar/> */}
         <Hero/>
         <About/>
-        <LatestWork/>
+        <MyWork/>
+        {/* <LatestWork/> */}
         <PricingCarousel/>
-        <Footer/>
+        {/* <Footer/> */}
     </div>
   )
 }

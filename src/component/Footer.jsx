@@ -32,16 +32,16 @@ function Footer() {
                 <div className='w-[8%] h-[1px] bg-[#B87333]'></div>
                 <div className='flex gap-[10px]'>
                     <div className='w-[90px] h-[90px] bg-red-400 cursor-pointer'>
-                        <img className='w-full h-full object-fill' src="/images/665c9fb6-2f36-46ec-8601-90cb04aa621a.JPG" alt="" />
+                        <img className='w-full h-full object-fill' src="/portrait/photo_2026-09-02_23-17-37.jpg" alt="" />
                     </div>
                     <div className='w-[90px] h-[90px] bg-red-400 cursor-pointer'>
                         <img className='w-full h-full object-fill' src="/images/lv.jpg" alt="" />
                     </div>                    
                     <div className='w-[90px] h-[90px] bg-red-400 cursor-pointer'>
-                        <img className='w-full h-full object-fill' src="/images/fad89210-491c-4450-b914-a0fa059f43d3.JPG" alt="" />
+                        <img className='w-full h-full object-fill' src="/graduation/photo_2026-06-15_11-54-40.jpg" alt="" />
                     </div>
                     <div className='w-[90px] h-[90px] bg-red-400 cursor-pointer'>
-                        <img className='w-full h-full object-fill' src="/images/ea966a05-dc3b-433c-a56c-c483446b4d1a.JPG" alt="" />
+                        <img className='w-full h-full object-fill' src="/sport/f8261545-d999-414e-a9f1-b3ff972851ef.JPG" alt="" />
                     </div>
                 </div>
             </div>
